@@ -1,0 +1,179 @@
+CREATE DATABASES PEREZ_LARA_CIA_LTDA;
+
+
+
+
+
+CREATE TABLE tipoDocumento(
+    idTipoDocumento INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    decripcionDocumento VARCHAR(45) NOT NULL);
+CREATE TABLE PERSONA 
+(
+    documento INT NOT NULL PRIMARY KEY,
+primerNombre varchar(45) not null,
+segundoNombre varchar(45) null,
+primerApellido varchar(45) not null,
+segundoApellido varchar(45) null,
+fechaNacimiento date not null,
+email varchar(45) null,
+idTipoDocumento INT NOT NULL,
+FOREIGN KEY (idTipoDocumento) REFERENCES tipoDocumento(idTipoDocumento)
+);
+
+CREATE TABLE tipoUsuario(
+    idtipoUsuario INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    tipoUsuario VARCHAR(45) NOT NULL
+);
+    
+CREATE TABLE usuario
+( 
+    idUsuario int AUTO_INCREMENT PRIMARY KEY,
+    documento INT NOT NULL,
+    nombreUsuario VARCHAR(45) NOT NULL,
+    contraseña VARCHAR(45) NOT NULL,
+    tipoUsuario INT NOT NULL,
+    FOREIGN KEY (documento) REFERENCES persona(documento),
+    FOREIGN KEY (tipoUsuario)REFERENCES tipoUsuario(idtipoUsuario)
+);
+
+
+CREATE TABLE tipoContacto 
+(idTipoContacto INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ tipoContacto varchar(45) NOT NULL
+);
+
+CREATE TABLE numeroTelefono
+(
+	idNumeroTelefono int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	numeroTelefono VARCHAR(45)NOT NULL,
+	idTipoContacto INT NOT NULL,
+	FOREIGN KEY (idTipoContacto) REFERENCES tipoContacto(idTipoContacto)
+);
+    
+
+CREATE TABLE personaNumeroTelefono
+(
+	idPersonaNumeroTelefono int AUTO_INCREMENT not null PRIMARY KEY,
+ 	documento INT not null,
+ 	idNumeroTelefono INT,
+ 	FOREIGN KEY (documento) REFERENCES persona(documento),
+ 	FOREIGN KEY (idNumeroTelefono) REFERENCES numeroTelefono(idNumeroTelefono)
+);
+
+CREATE TABLE departamento
+	(
+        idDepartamento INT NOT NULL PRIMARY KEY,
+        Departamento VARCHAR(45) NOT NULL                          
+    );
+CREATE TABLE ciudad
+	(
+        idCiudad INT NOT NULL PRIMARY KEY,
+        ciudad VARCHAR(45) NOT NULL,
+    	idDepartamento INT NOT NULL,
+        FOREIGN KEY(idDepartamento) REFERENCES Departamento(idDepartamento)
+    );
+CREATE TABLE tipoCliente
+	(
+        idTipoCliente INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        tipoCliente VARCHAR(45) NOT NULL
+    );
+CREATE TABLE direccion
+	(
+        idDireccion INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        direccion VARCHAR(45) NOT NULL
+    ); 
+    
+CREATE TABLE Cliente
+(
+    idCliente int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    fechaNacimiento DATE NOT NULL,
+    documento int NOT NULL,
+    idTipoCliente INT NOT NULL,
+    idCiudad INT NOT NULL,
+    FOREIGN KEY (documento) REFERENCES persona(documento),
+    FOREIGN KEY (idTipoCliente) REFERENCES tipoCliente(idTipoCliente),
+    FOREIGN KEY (idCiudad) REFERENCES ciudad(idCiudad)
+);
+
+CREATE TABLE direccionCliente 
+	(idDireccionCliente int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+     idCliente INT NOT NULL,
+     idDireccion INT NOT NULL,
+     FOREIGN KEY (idDireccion) REFERENCES direccion(idDireccion),
+     FOREIGN KEY (idCliente) REFERENCES cliente(idCliente)
+    );
+
+CREATE TABLE estado 
+(
+    idEstado INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    estado VARCHAR(45) NOT NULL
+);
+    
+CREATE TABLE seguro
+(
+    idSeguro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    seguro VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE cotizacion 
+(
+    idCotizacion INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    fechaCotizacion DATE NOT NULL,
+    idSeguro INT NOT NULL,
+    idCliente INT NOT NULL,
+    idEstado INT NOT NULL,
+    FOREIGN KEY (idCliente) REFERENCES cliente(idCliente),
+    FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),
+    FOREIGN KEY (idEstado) REFERENCES estado(idEstado)     
+);
+
+
+Create table aseguradora 
+(
+IdAseguradora INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+Aseguradora VARCHAR (45) NOT NULL
+);
+
+Create table poliza 
+(
+idPoliza Int Not null auto_increment Primary key, 
+fecha DATE not null,
+idSeguro Int not null, 
+idAseguradora Int not null,
+idCliente Int,
+idEstado Int not null,
+FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),    
+FOREIGN KEY (idAseguradora) REFERENCES aseguradora(idAseguradora),
+FOREIGN KEY (idCliente) REFERENCES cliente(idCliente),
+FOREIGN KEY (idEstado) REFERENCES estado(idEstado)
+);
+
+Create table seguroAseguradora 
+(
+idSeguroAseguradora int auto_increment Primary key,
+IdSeguro INT not null, 
+IdAseguradora INT not null,
+FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),
+FOREIGN KEY (idAseguradora) REFERENCES aseguradora(idAseguradora)      
+);
+
+CREATE TABLE AseguradoraCotizante(
+    idAseguradoraCotizante INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    idCotizacion INT NOT NULL,
+    idAseguradora INT NOT NULL,
+    FOREIGN KEY(idCotizacion) REFERENCES cotizacion(idCotizacion),
+    FOREIGN KEY(idAseguradora) REFERENCES aseguradora(idAseguradora)  
+);
+   
+
+CREATE TABLE Siniestro(
+    idSiniestro INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Fecha DATE NOT NULL,
+    Descripcion VARCHAR(45) NOT NULL,
+    idPoliza INT NOT NULL,
+    idEstado INT NOT NULL,
+    FOREIGN KEY(idPoliza) REFERENCES poliza(idPoliza),
+    FOREIGN KEY(idEstado) REFERENCES estado(idEstado)  
+);
+
+ 
