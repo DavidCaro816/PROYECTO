@@ -1,0 +1,156 @@
+body{
+    background-color: white;
+    background-attachment: fixed;
+    font-family: "Yu Gothic UI Semibold",serif;
+
+}
+
+.menuArriba {
+    margin-left: 83%;
+    margin-top: 45px;
+}
+#campana{
+
+    width: 60px;
+    height: 60px;
+    border-radius:150px;
+}
+#logo{
+    width: 60px;
+    height: 60px;
+    border: #E91D24;
+    border-radius:150px;
+    margin-left: 30px;
+    box-shadow: 1px 1px 5px #B4B1B1;
+}
+#titulo{
+    color: #E91D24;
+    font-size: 70px;
+    margin-left: 240px;
+    margin-top: -100px;
+    padding-right: 50px;
+    text-shadow: 0.1em 0.1em 0.1em #B4B1B1;
+}
+#logoA {
+    font-size: 70px;
+    color: white;
+    margin-top: 45px;
+    text-decoration: none;
+    padding-left: 10px;
+
+}
+a{
+    text-decoration: none;
+    color:aliceblue;
+}
+.contenedor{
+    display: flex;
+    background-color: #E91D24;
+    width: 240px;
+    height: 90px;
+    border-radius: 40px;
+    border: none;
+    padding-left: 40px;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: -110px;
+    text-decoration: none;
+
+}
+#anadir{
+
+    text-decoration: none;
+    background-color: #E91D24;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius:40px;
+
+
+
+}
+.contenedor:hover, #logo:hover, #campana:hover  {
+    box-shadow: 1px 5px 30px #E91D24;
+}
+
+.buscar ul{
+    list-style: none;
+}
+.buscar li{;
+    display:inline;
+}
+
+.buscar p{
+    padding-left:60% ;
+    display:inline;
+}
+
+.buscar input[type="text"]{
+    display: flex;
+    padding: 0px 0px 0px 15px;
+    height: 45px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px #B4B1B1;
+    margin-left: 48%;
+    margin-top: 40px;
+}
+
+
+.contenedorCliente{
+    background-color: white;
+    border: #E91D24;
+    border-radius: 25px;
+    width: 85%;
+    height: 650px;
+    margin-left: 170px;
+    box-shadow: 1px 5px 30px #B4B1B1;
+    margin-bottom: 10px;
+}
+
+#filtro {
+    margin-top: 20px;
+    margin-left: 20%;
+    background-color: #E91D24;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} #filtro:hover {
+      box-shadow: 1px 1px 5px #E91D24;
+  }
+
+#limpiar {
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+#limpiar:hover {
+    box-shadow: 1px 1px 5px black;
+}
+
+#filtroDepa, #filtroCiud, #filtroEsta {
+    margin-left: 100px;
+    background-color: white;
+    width: 140px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
