@@ -1,0 +1,93 @@
+body{
+    background-color: white;
+    background-attachment: fixed;
+    font-family: "Yu Gothic UI Semibold",serif;
+
+}
+
+#campana, #logo{
+
+    width: 60px;
+    height: 60px;
+    border-radius:150px;
+}
+        #logo:hover, #campana:hover  {
+            box-shadow: 1px 5px 30px #E91D24;
+        }
+
+#titulo{
+    color: #E91D24;
+    font-size: 70px;
+    text-shadow: 0.1em 0.1em 0.1em #B4B1B1;
+}
+.btNuevoCliente {
+
+    background-color: #E91D24;
+    width: 240px;
+    height: 90px;
+    border-radius: 40px;
+    border: none;
+    align-items: center;
+}
+                .btNuevoCliente a{
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                }
+.buscar ul{
+    list-style: none;
+}
+.buscar li{;
+    display:inline;
+}
+
+.buscar p{
+    padding-left:60% ;
+    display:inline;
+}
+
+.buscar input[type="text"]{
+    display: flex;
+    padding: 0px 0px 0px 15px;
+    height: 45px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px #B4B1B1;
+}
+.contenedorfiltro{
+    background-color: #B4B1B1;
+    width: 900px;
+    height: 500px;
+    border-radius:20px;
+}
+#filtro {
+    background-color: #E91D24;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+            } #filtro:hover {
+                  box-shadow: 1px 1px 5px #E91D24;
+             }
+#limpiar {
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+        #limpiar:hover {
+            box-shadow: 1px 1px 5px black;
+        }
+
+
+
+
+
+
