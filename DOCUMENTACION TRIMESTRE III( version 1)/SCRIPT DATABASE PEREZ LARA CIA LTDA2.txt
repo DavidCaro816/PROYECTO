@@ -1,0 +1,201 @@
+
+CREATE DATABASE PEREZ_LARA_CIA_LTDA;
+
+
+use PEREZ_LARA_CIA_LTDA;
+
+
+CREATE TABLE tipoDocumento(
+    idTipoDocumento INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    descripcionDocumento VARCHAR(45) NOT NULL,
+	 abreviacion varchar(10) not null);
+
+
+CREATE TABLE tipoUsuario(
+    idtipoUsuario INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    tipoUsuario VARCHAR(45) NOT NULL
+);
+    
+CREATE TABLE usuario
+( 
+documento INT NOT NULL PRIMARY KEY,
+primerNombre varchar(45) not null,
+segundoNombre varchar(45) null,
+primerApellido varchar(45) not null,
+segundoApellido varchar(45) null,
+email varchar(45) null,
+idTipoDocumento INT NOT NULL,
+    nombreUsuario VARCHAR(45) NOT NULL,
+    contraseña VARCHAR(45) NOT NULL,
+    tipoUsuario INT NOT NULL,
+   FOREIGN KEY (idTipoDocumento) REFERENCES tipoDocumento(idTipoDocumento),
+    FOREIGN KEY (tipoUsuario)REFERENCES tipoUsuario(idtipoUsuario)
+);
+   
+
+
+CREATE TABLE departamento
+	(
+        idDepartamento INT NOT NULL PRIMARY KEY,
+        Departamento VARCHAR(45) NOT NULL                          
+    );
+CREATE TABLE ciudad
+	(
+        idCiudad INT NOT NULL PRIMARY KEY,
+        ciudad VARCHAR(45) NOT NULL,
+    	idDepartamento INT NOT NULL,
+        FOREIGN KEY(idDepartamento) REFERENCES Departamento(idDepartamento)
+    );
+CREATE TABLE tipoCliente
+	(
+        idTipoCliente INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        tipoCliente VARCHAR(45) NOT NULL
+    );
+
+    
+CREATE TABLE Cliente
+(
+documento INT NOT NULL PRIMARY KEY, 
+primerNombre varchar(45) not null,
+segundoNombre varchar(45) null,
+primerApellido varchar(45) not null,
+segundoApellido varchar(45) null,
+email varchar(45) null,
+idTipoDocumento INT NOT NULL,
+fechaNacimiento DATE NOT NULL,
+idTipoCliente INT NOT NULL,
+idCiudad INT NOT NULL,
+telefono1 varchar(13) not null, 
+telefono2 varchar(13) null,
+direccionCasa varchar(100) not null,
+direccionTrabajo varchar(100) null,
+    FOREIGN KEY (idTipoCliente) REFERENCES tipoCliente(idTipoCliente),
+    FOREIGN KEY (idCiudad) REFERENCES ciudad(idCiudad),
+FOREIGN KEY (idTipoDocumento) REFERENCES tipoDocumento(idTipoDocumento)
+);
+
+
+CREATE TABLE estado 
+(
+    idEstado INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    estado VARCHAR(45) NOT NULL
+);
+    
+CREATE TABLE seguro
+(
+    idSeguro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    seguro VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE cotizacion 
+(
+    idCotizacion INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    fechaCotizacion DATE NOT NULL,
+    idSeguro INT NOT NULL,
+    documento INT NOT NULL,
+    idEstado INT NOT NULL,
+    FOREIGN KEY (documento) REFERENCES cliente(documento),
+    FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),
+    FOREIGN KEY (idEstado) REFERENCES estado(idEstado)     
+);
+
+
+Create table aseguradora 
+(
+IdAseguradora INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+Aseguradora VARCHAR (45) NOT NULL
+);
+
+Create table poliza 
+(
+idPoliza Int Not null auto_increment Primary key, 
+fecha DATE not null,
+idSeguro Int not null, 
+idAseguradora Int not null,
+documento Int,
+idEstado Int not null,
+FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),    
+FOREIGN KEY (idAseguradora) REFERENCES aseguradora(idAseguradora),
+FOREIGN KEY (documento) REFERENCES cliente(documento),
+FOREIGN KEY (idEstado) REFERENCES estado(idEstado)
+);
+
+Create table seguroAseguradora 
+(
+idSeguroAseguradora int auto_increment Primary key,
+IdSeguro INT not null, 
+IdAseguradora INT not null,
+FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),
+FOREIGN KEY (idAseguradora) REFERENCES aseguradora(idAseguradora)      
+);
+
+CREATE TABLE AseguradoraCotizante(
+    idAseguradoraCotizante INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    idCotizacion INT NOT NULL,
+    idAseguradora INT NOT NULL,
+    FOREIGN KEY(idCotizacion) REFERENCES cotizacion(idCotizacion),
+    FOREIGN KEY(idAseguradora) REFERENCES aseguradora(idAseguradora)  
+);
+   
+
+CREATE TABLE Siniestro(
+    idSiniestro INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Fecha DATE NOT NULL,
+    Descripcion VARCHAR(45) NOT NULL,
+    idPoliza INT NOT NULL,
+    idEstado INT NOT NULL,
+    FOREIGN KEY(idPoliza) REFERENCES poliza(idPoliza),
+    FOREIGN KEY(idEstado) REFERENCES estado(idEstado)  
+);
+
+
+
+
+             INSERT INTO `departamento` (`idDepartamento`, `Departamento`) VALUES
+(0, 'AMAZONAS'),
+(1, 'ANTIOQUIA'),
+(2, 'ARAUCA'),
+(3, 'ATLÁNTICO'),
+(4, 'BOGOTA D.C'),
+(5, 'BOLÍVAR'),
+(6, 'BOYACÁ'),
+(7, 'CALDAS'),
+(8, 'CAQUETÁ'),
+(9, 'CASANARE'),
+(10, 'CAUCA'),
+(11, 'CESAR'),
+(12, 'CHOCÓ'),
+(13, 'CÓRDOBA'),
+(14, 'CUNDINAMARCA'),
+(15, 'GUAINÍA'),
+(16, 'GUAVIARE'),
+(17, 'HUILA'),
+(18, 'LA GUAJIRA'),
+(19, 'META'),
+(20, 'NARIÑO'),
+(21, 'NORTE DE SANTANDER'),
+(22, 'PUTUMAYO'),
+(23, 'QUINDÍO'),
+(24, 'RISARALDA'),
+(25, 'SAN ANDRÉS Y PROVIDENCIA'),
+(26, 'SANTANDER'),
+(27, 'SUCRE'),
+(28, 'TOLIMA'),
+(29, 'VALLE DEL CAUCA'),
+(30, 'VAUPÉS'),
+(31, 'VICHADA');
+       
+
+INSERT INTO `tipocliente` (`idTipoCliente`, `tipoCliente`) VALUES
+(1, 'PROSPECTO'),
+(2, 'POTENCIAL');
+     
+
+INSERT INTO `tipodocumento` (`idTipoDocumento`, `descripcionDocumento`, `abreviacion`) VALUES
+(1, 'Cedula', 'C.C'),
+(2, 'Tarjeta de Identidad', 'T.I');
+
+INSERT INTO `ciudad` (`idCiudad`, `ciudad`, `idDepartamento`) VALUES
+(1, 'BOGOTA D.C', 4),
+(2, 'SOACHA', 14);
+
