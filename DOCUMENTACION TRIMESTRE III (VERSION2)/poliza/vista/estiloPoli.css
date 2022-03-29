@@ -1,0 +1,230 @@
+*{
+	font-family: "Yu Gothic UI Semibold",serif;
+}
+body{
+    background-color: white;
+    background-attachment: fixed;
+}
+
+
+.menuArriba {
+    margin-left: 83%;
+    margin-top: 45px;
+}
+
+#campana{
+    width: 60px;
+    height: 60px;
+    border-radius:150px;
+}
+#logo{
+    width: 60px;
+    height: 60px;
+    border: #E91D24;
+    border-radius:150px;
+    margin-left: 30px;
+    box-shadow: 1px 1px 5px #B4B1B1;
+}
+#logo:hover, #campana:hover  {
+    box-shadow: 1px 5px 30px #E91D24;
+}
+
+
+.ContMenuPolizas{
+	margin-left: 120px;
+    height: 100px;
+    margin-top: -60px;
+    font-size: 30px;
+    
+}
+
+.ContMenuPolizas p{
+    display:inline;
+    color: red;
+    font-size: 60px; 
+
+}
+
+.ContMenuPolizas ul{
+    list-style: none;
+}
+.ContMenuPolizas li{;
+    display:inline;
+}
+
+
+
+.ContNuevaPoliza{
+	display:inline;
+	background-color: #E91D24;
+    border-radius: 40px;
+    padding-left:20px;
+    padding-top:20px;  
+}
+.ContNuevaPoliza:hover{
+    box-shadow: 1px 5px 30px #E91D24;
+}
+.ContLetraPoliza{
+	font-size: 20px; 
+	display:inline-flex;
+	padding-right: 20px;
+	transform: translateY(48px);
+}
+.ContLetraPoliza p{
+	font-size: 40px; 
+	color: white;
+	padding-right:25px;
+	transform: translateY(-58px);
+}
+.ContMenuPolizas a{
+	text-decoration:none ;
+	color: white;
+}
+.ContMenuPolizas input[type="text"]{
+    padding: 0px 0px 0px 15px;
+    height: 45px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+    margin-left:2%;
+    margin-top: 40px;
+    font-size: 15px;
+    transform: translateY(-11px);
+}
+
+
+.ContSombraPoliza{
+
+    background-color: white;
+    border: #E91D24;
+    border-radius: 25px;
+    width: 85%;
+    height: 540px;
+    margin-left: 180px;
+    box-shadow: 1px 5px 30px #B4B1B1;
+    margin-top: 60px;
+}
+.ContPoliza{
+  	position: absolute;
+    background-color: white;
+    border: #E91D24;
+    border-radius: 25px;
+    width: 85%;
+    height: 540px;
+    margin-left: 120px;
+    box-shadow: 1px 5px 15px #9b9b9b;
+    margin-top: -580px;
+   }
+
+
+.ContPoliza p{
+    display:inline;
+}
+
+.ContPoliza ul{
+    list-style: none;
+}
+.ContPoliza li{;
+    display:inline;
+}
+#Fecha{
+	background: white;
+	border: none;
+	text-align: center;
+	font-size: 18px;
+	width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#Fecha:hover,#Cliente:hover,#Seguro:hover,#Aseguradora:hover, #Estado:hover {
+	box-shadow: 1px 5px 15px #9b9b9b;
+}
+
+#Cliente,#Seguro,#Aseguradora,#Estado{
+	background: white;
+	border: none;
+	text-align: center;
+	font-size: 18px;
+	margin-left:3%;
+	width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#btValorAsegurado{
+	text-align: center;
+	border: none;
+	background: white;
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#btValorAsegurado:hover,#btValorPrima:hover{
+	box-shadow: 1px 5px 15px #9b9b9b;
+}
+#btValorPrima{
+	text-align: center;
+	margin-left:3%;
+	border: none;
+	background: white;
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tablaPoliza{
+    text-align:center;
+    margin-top: 40px;
+    border-collapse: collapse;
+    margin-left: 40px;
+    border:none;
+    border-bottom: 1px solid #ccc;
+}
+
+.tablaPoliza th{
+    font-family: "arial",serif;
+    font-weight: 750;
+    height: 80px;
+    width: 140px;
+    border: none;
+}
+
+.tablaPoliza td{
+    width: 160px;
+    height: 50px;
+    border:none;
+}
+
+.tablaPoliza tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.btEditar,#btFiltrar{
+    background-color: #E91D24;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} .btEditar:hover,#btFiltrar:hover {
+      box-shadow: 1px 1px 5px #E91D24;
+  }
+
+.btEliminar,#btLimpiar{
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} 
+.btEliminar:hover,#btLimpiar:hover{
+      box-shadow: 1px 1px 5px black;
+}
