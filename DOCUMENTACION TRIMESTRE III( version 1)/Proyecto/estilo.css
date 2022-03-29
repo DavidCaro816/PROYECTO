@@ -1,0 +1,141 @@
+*{
+	font-family: "Yu Gothic UI Semibold",serif;
+}
+body{
+    background-color: white;
+    background-attachment: fixed;
+}
+
+
+.ContMenuArrriba {
+
+	margin-left: 120px;
+	left: 100px;
+    height: 100px;
+
+}
+.ContMenuArrriba ul{
+    list-style: none;
+}
+.ContMenuArrriba li{;
+    display:inline;
+}
+
+.ContMenuArrriba p{
+	padding-left:60% ;
+    display:inline;
+}
+
+.ContMenuArrriba  input[type="text"]{
+	display: inline;
+	padding: 0px 0px 0px 15px;
+	height: 35px;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 1px 1px 5px #B4B1B1; 
+}
+#campana{
+	margin-left: 30px;
+    width: 60px;
+    height: 60px;
+}
+#perro{
+
+    width: 60px;
+    height: 60px;
+    border: #E91D24;
+    border-radius:150px;
+    padding-left: 35px;
+}
+
+
+.ContMenuRecientes{
+
+	margin-left: 120px;
+    height: 50px;
+    margin-top: -20px;
+    font-size: 30px;
+    font-:10px;
+}
+
+.ContMenuRecientes p{
+    display:inline;
+}
+
+.ContMenuRecientes ul{
+    list-style: none;
+}
+.ContMenuRecientes li{;
+    display:inline;
+}
+#Seguro{
+	background: transparent;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	margin-left: 80px;
+}
+#Aseguradora{
+	background: transparent;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	margin-left: 80px;
+}
+
+.ContDivs{
+	
+	margin-top: 10px;
+	margin-left: 120px;
+	left: 100px;
+	height: 550px;
+}
+
+
+.ContRecientes{
+	
+	margin-left: 40px;
+	width: 620px;
+	height: 530px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 10px #B4B1B1;
+}
+.ContRecientes p{
+    display:inline;
+}
+
+.ContRecientes ul{
+    list-style: none;
+}
+.ContRecientes li{;
+    display:inline;
+}
+#Cliente{
+padding-left:50px;
+}
+#SeguroContRecientes{
+padding-left:50px;
+}
+#AseguradoraContRecientes{
+padding-left:50px;
+}
+
+
+.ContPolizas{
+
+margin-top:-38px;
+margin-left: 680px;
+width: 600px;
+height: 200px;
+border-radius: 30px;
+box-shadow: 1px 1px 10px #B4B1B1;
+}
+.ContExpedicion{
+box-shadow: 1px 1px 10px #B4B1B1;
+top: 20px;
+width: 150px;
+height: 50px;
+border-radius: 30px;
+
+}
+
