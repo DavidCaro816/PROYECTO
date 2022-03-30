@@ -1,0 +1,244 @@
+body{
+    background-color: white;
+    background-attachment: fixed;
+    font-family: "Yu Gothic UI Semibold",serif;
+    margin:0;
+    padding: 0;
+    width: 100vW;
+    height: 100vH;
+}
+
+.contenedorGlobal{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 0.1fr auto;
+    width: 100%;
+    height: 100%;
+}
+div.navbar{
+    padding: 0.3% 0.7% 0.35% 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ED1C24;
+    grid-row: 1/5;
+    height: 100%;
+}
+
+div.navbar_header,div.navbar_body,div.navbar_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.navbar_header{
+    margin-bottom: 17px;
+}
+
+div.navbar_body div{
+    margin-top: 12px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+}
+
+
+div.navbar_footer div{
+    margin-top: 20px;
+}
+.clients:hover, .policies:hover, .quotes:hover, .reports:hover, .sinister:hover, .sign_out:hover, .settings:hover, .home:hover{
+    background-color: #231F20;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #231F20;
+    cursor:pointer;
+}
+.contenedorBotones{
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+.logo{
+    margin-left: 30px;
+}
+.clients:hover, .policies:hover, .quotes:hover, .reports:hover, .sinister:hover, .sign_out:hover, .settings:hover, .home:hover{
+    background-color: #231F20;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #231F20;
+    cursor:pointer;
+}
+#campana, #logo{
+
+    width: 60px;
+    height: 60px;
+    border-radius:150px;
+}
+#logo:hover, #campana:hover  {
+    box-shadow: 1px 5px 30px #E91D24;
+}
+
+#titulo{
+    margin-bottom: 60px;
+    color: #E91D24;
+    font-size: 70px;
+    text-shadow: 0.1em 0.1em 0.1em #B4B1B1;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    padding-left: 240px;
+}
+.btNuevoSiniestro button {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 60px;
+
+}
+.btNuevoSiniestro button {
+
+    background-color: #E91D24;
+    width: 240px;
+    height: 90px;
+    border-radius: 40px;
+    border: none;
+
+}
+.btNuevoSiniestro button {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btNuevoSiniestro button:hover{
+    box-shadow: 1px 5px 30px #E91D24;
+}
+#mas{
+    font-size: 20px;
+}
+#nuevo{
+    text-decoration: none;
+}
+div.search{
+    width: 270px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+    background: white;
+    margin-left: 60px;
+}
+
+.contenedorSiniestro{
+    display: flex;
+    margin-left: 180px;
+    width: 84%;
+    height: 100%;
+    border-radius:20px;
+    box-shadow: 1px 5px 15px #9b9b9b;
+    background-color: white;
+
+}
+
+#filtro {
+    margin-top: 20px;
+    margin-left: 20%;
+    background-color: #E91D24;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} #filtro:hover {
+      box-shadow: 1px 1px 5px #E91D24;
+  }
+
+#limpiar {
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+#limpiar:hover {
+    box-shadow: 1px 1px 5px black;
+}
+
+#filtroCiud, #filtroEsta {
+    margin-left: 100px;
+    background-color: white;
+    width: 140px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+#filtroDepa{
+    width: 160px;
+    height: 30px;
+    margin-left: 180px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+.clientes{
+    text-align:center;
+    margin-top: 40px;
+    border-collapse: collapse;
+    margin-left: 40px;
+    border:none;
+}
+
+
+.clientes th{
+    font-family: "arial",serif;
+    font-weight: 750;
+    height: 80px;
+    width: 140px;
+    border: none;
+}
+.clientes tr {
+    border-bottom: 1px solid #ccc;
+}
+.btEditar{
+    background-color: #E91D24;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} .btEditar:hover {
+      box-shadow: 1px 1px 5px #E91D24;
+  }
+
+.btEliminar{
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} .btEliminar:hover {
+      box-shadow: 1px 1px 5px black;
+  }
+
+
