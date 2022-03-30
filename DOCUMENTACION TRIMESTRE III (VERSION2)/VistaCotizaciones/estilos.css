@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+}
+
+body{
+    background: #ffffff;
+}
+
+div.navbar{
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background: #ED1C24;
+
+}
+
+div.navbar_header,div.navbar_body,div.navbar_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+div.navbar_header{
+    margin-bottom: 17px;
+    margin-top: 15px;
+}
+
+div.navbar_body div{
+    margin-top: 12px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+}
+
+div.navbar_body div.home{
+    border-radius: 10px;
+}
+
+#settings{
+    position: absolute;
+    top: 85%;
+}
+
+#signout{
+    position: absolute;
+    top: 92%;
+}
+
+#logo{
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius:150px;
+    cursor: pointer;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+
+#campana{
+    position: absolute;
+    right: 90px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius:150px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+
+#titulo{
+    position: absolute;
+    font-size: 50px;
+    color: #E91D24;
+    text-shadow: 0.1em 0.1em 0.1em #B4B1B1;
+    left: 10%;
+    top: 11%;
+}
+
+
+.tituloCotizaciones a{
+    font-size: 40px;
+    color: #ED1C24;
+    font-weight: bold;
+}
+
+.nuevaCotizacion button{
+    background: #ED1C24;
+    width: 180px;
+    height: 46px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+
+}
+
+.tituloCotizaciones{
+    position: absolute;
+    top: 7%;
+    left: 10%;
+}
+
+.nuevaCotizacion{
+    position: absolute;
+    top: 8%;
+    left: 30%;
+}
+
+.barraBuscar{
+    position: absolute;
+    top: 8%;
+    left: 46%;
+}
+
+.barraBuscar input{
+    text-indent: 10px;
+    width: 230px;
+    height: 46px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+.contenedorPadre{
+    padding: 30px;
+    position: absolute;
+    top: 56%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: #E91D24;
+    border-radius: 30px;
+    width: 1200px;
+    height: 500px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+
+.contenedorAtras{
+    position: absolute;
+    top: 58%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: #E91D24;
+    border-radius: 30px;
+    width: 1200px;
+    height: 500px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 8px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+
+.selectFecha input[type="date"]{
+    border: none;
+    width: 200px;
+    border-left: 1px rgb(0, 0, 0) solid;
+    text-indent: 10px;
+    font-weight: bold;
+}
+
+select{
+    border: none;
+    width: 200px;
+    border-left: 1px rgb(0, 0, 0) solid;
+    text-indent: 10px;
+    font-weight: bold;
+}
+
+.selectFecha{
+    position: absolute;
+    top: 30px;
+    font-weight: bold;
+}
+
+.selectCliente{
+    position: absolute;
+    top: 30px;
+    left: 22%;
+}
+
+.selectAseguradora{
+    position: absolute;
+    top: 30px;
+    left: 41%;
+}
+
+.selectSeguro{
+    position: absolute;
+    top: 30px;
+    left: 61%;
+}
+
+
+.selectEstado{
+    position: absolute;
+    top: 30px;
+    left: 81%;
+}
+
+#limpiar{
+    position: absolute;
+    left: 51%;
+    top: 13%;
+    background: rgb(0, 0, 0);
+    width: 96px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#filtrar{
+    position: absolute;
+    background: #ED1C24;
+    width: 96px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    top: 13%;
+    right: 51%;
+    cursor: pointer;
+}
+
+.cajaTabla{
+    margin-top:7%;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+#titulos{
+    font-weight:bold ;
+}
+
+td{
+    border-bottom: 1px rgb(163, 163, 163) solid;
+    width: 190px;
+    text-align: center;
+    padding: 8px;
+}
+
+
+
