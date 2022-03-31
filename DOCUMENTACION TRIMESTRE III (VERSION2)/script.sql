@@ -111,7 +111,7 @@ Create table poliza
     idAseguradora INT NOT NULL,
     documento INT NOT NULL,
     idEstado INT NOT NULL,
-    archivo BLOB,
+    archivo BLOB NOT NULL,
     FOREIGN KEY (idSeguro) REFERENCES seguro(idSeguro),
     FOREIGN KEY (idAseguradora) REFERENCES aseguradora(idAseguradora),
     FOREIGN KEY (documento) REFERENCES cliente(documento),
