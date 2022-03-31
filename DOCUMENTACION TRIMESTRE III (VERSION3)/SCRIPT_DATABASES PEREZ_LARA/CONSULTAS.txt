@@ -1,0 +1,40 @@
+CONSULTAS:
+
+
+SELECT * FROM `departamento`
+
+SELECT * FROM `tipocliente`
+
+SELECT * FROM `cliente`
+
+SELECT * FROM `aseguradora`
+
+SELECT * FROM `estado`
+
+SELECT * FROM `seguro`
+
+SELECT * FROM `tipousuario`
+
+SELECT * FROM `tipodocumento`
+
+SELECT * FROM `usuario`
+
+SELECT * from cliente, ciudad, tipodocumento, departamento, tipocliente
+        WHERE cliente.idTipoDocumento=tipoDocumento.idTipoDocumento and departamento.idDepartamento=ciudad.idDepartamento and cliente.idCiudad=ciudad.idCiudad 
+         and tipoCliente.idTipoCliente=cliente.idTipoCliente
+
+
+SELECT * FROM tipodocumento,cliente,seguro,aseguradora,poliza,estado WHERE cliente.idTipoDocumento=tipoDocumento.idTipoDocumento 
+AND cliente.documento=poliza.documento AND poliza.idSeguro=seguro.idSeguro AND poliza.idAseguradora=aseguradora.idAseguradora AND poliza.idEstado=estado.IdEstado
+
+
+SELECT ciudad, Departamento from ciudad, departamento WHERE ciudad.idDepartamento=departamento.idDepartamento;
+
+
+SELECT primerNombre, primerApellido, abreviacion as TipoDeDocumento, documento, tipocliente FROM cliente INNER JOIN tipocliente on cliente.idTipoCliente=tipocliente.idTipoCliente 
+INNER JOIN tipodocumento on cliente.idTipoDocumento=tipodocumento.idTipoDocumento;
+
+
+SELECT primerNombre, primerApellido, abreviacion as tipoDocumento, cliente.documento, codigo, seguro, aseguradora, estado from cliente INNER JOIN poliza on poliza.documento=cliente.documento 
+INNER JOIN aseguradora on aseguradora.idAseguradora=poliza.idAseguradora INNER JOIN seguro on seguro.idSeguro=poliza.idSeguro 
+INNER JOIN tipodocumento on cliente.idTipoDocumento=tipodocumento.idTipoDocumento INNER JOIN estado on estado.idEstado=poliza.idEstado;
