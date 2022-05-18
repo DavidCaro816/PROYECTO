@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f1f1f1;
+}
+
+div.navbar{
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background: #ED1C24;
+
+}
+
+div.navbar_header,div.navbar_body,div.navbar_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.navbar_header{
+    margin-bottom: 17px;
+    margin-top: 15px;
+}
+
+div.navbar_body div{
+    margin-top: 12px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.clients:hover, .policies:hover, .quotes:hover, .reports:hover, .sinister:hover, .sign_out:hover, .settings:hover, .home:hover{
+    background-color: #231F20;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #231F20;
+    cursor:pointer;
+}
+
+#settings{
+    position: absolute;
+    top: 85%;
+}
+
+#signout{
+    position: absolute;
+    top: 92%;
+}
+
+#logo{
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius:150px;
+    cursor: pointer;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+
+#campana{
+    position: absolute;
+    right: 140px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius:150px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: none;
+}
+#logo:hover, #campana:hover  {
+    box-shadow: 1px 5px 30px #E91D24;}
+
+.Container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-auto-rows: minmax(600px, auto);
+
+
+}
+#perfil{
+    width: 250px;
+    padding-top: 15px;
+}
+
+.Container .containerPerfil{
+
+    text-align: center;
+    border-radius: 20px;
+    background: white;
+    padding: 30px;
+    padding-top: 1px;
+    border: 1px solid #fff;
+    box-shadow: 4px 8px 4px 10px #BCB8B8;
+
+}
+
+a{
+    display: block;
+    margin: 5px;
+
+}
+
+.containerPerfil h2{
+    margin: .5em 0;
+}
+
+.containerPerfil a{
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: #ED1C24;
+
+}
+
+.containerPerfil a:hover{
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    background: #F13030;
+
+}

@@ -1,0 +1,200 @@
+
+.contenedorPadre{
+    display: none;
+    width: 887px;
+    height: 408px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+.abrirModal{
+    display: block;
+    pointer-events: auto;
+    inset: 0;
+    margin: auto;
+    transition-duration: 1s;
+    position: absolute;
+}
+.opacidad{
+
+}
+.titulo{
+    top: 4%;
+    left: 2%;
+    position: absolute;
+}
+
+.titulo a{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.campoPrimerNombre{
+    top: 15%;
+    left: 2%;
+    position: absolute;
+}
+
+.campoSegundoNombre{
+    top: 15%;
+    left: 34%;
+    position: absolute;
+}
+
+.campoPrimerApellido{
+    top: 15%;
+    right: 2%;
+    position: absolute;
+}
+
+.campoSegundoApellido{
+    top: 29%;
+    left: 2%;
+    position: absolute;
+}
+
+.campoTipoDocumento{
+    top: 28.1111%;
+    left: 34%;
+    position: absolute;
+}
+
+.campoNumeroDocumento{
+    top: 29%;
+    right: 2%;
+    position: absolute;
+}
+
+.campoFechaNacimiento{
+    top: 42%;
+    left: 2%;
+    position: absolute;
+}
+
+.campoDepartamento{
+    top: 41%;
+    left: 34%;
+    position: absolute;
+}
+
+.campoCiudad{
+    top: 41%;
+    right: 2%;
+    position: absolute;
+}
+
+.campoDireccion{
+    top: 54%;
+    left: 2%;
+    position: absolute;
+}
+
+.campoEmail{
+    top: 54%;
+    right: 2%;
+    position: absolute;
+}
+
+.campoDireccionTrabajo{
+    position: absolute;
+    top: 54%;
+    left: 34%;
+}
+
+.campoNumeroTelefono{
+    top: 67%;
+    left: 2%;
+    position: absolute;
+}
+
+.campoNumeroTelefono2{
+    position: absolute;
+    top: 67%;
+    left: 34%;
+}
+
+.campoTipoCliente{
+    top: 66.5%;
+    right: 2%;
+    position: absolute;
+}
+
+.botonGuardar{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    bottom: 7%;
+}
+
+input{
+    width: 270px;
+    height: 30px;
+}
+
+select{
+    width:278px;
+    height: 33px;
+}
+
+.botonGuardar input[type="submit"]{
+    background: #ED1C24;
+    border-radius: 20px;
+    border: none;
+    height: 45px;
+    width: 190px;
+    color: white;
+    font-weight: 600;
+}
+
+.contenedorPadre input[type="text"]{
+    border: none;
+    border-bottom: 1px rgb(121, 121, 121) solid;
+}
+
+.contenedorPadre input[type="email"]{
+    border: none;
+    border-bottom: 1px rgb(121, 121, 121) solid;
+
+}
+
+.contenedorPadre input[type="date"]{
+    border: none;
+    border-bottom: 1px rgb(121, 121, 121) solid;
+
+}
+
+.contenedorPadre select{
+    border: none;
+    border-bottom: 1px rgb(121, 121, 121) solid;
+}
+
+.contenedorPadre input[type="submit"]:hover{
+    background: #c20006 ;
+    color: white;
+    cursor: pointer;
+}
+
+.contenedorPadre select:focus{
+    outline: none;
+    border-bottom: 1px #ED1C24 solid;
+}
+
+
+.contenedorPadre input[type="date"]:focus{
+    outline: none;
+    border-bottom: 1px #ED1C24 solid;
+}
+
+.contenedorPadre input[type="text"]:focus{
+    outline: none;
+    border-bottom: 1px #ED1C24 solid;
+}
+
+.contenedorPadre input[type="email"]:focus{
+    outline: none;
+    border-bottom: 1px #ED1C24 solid;
+}
+
+

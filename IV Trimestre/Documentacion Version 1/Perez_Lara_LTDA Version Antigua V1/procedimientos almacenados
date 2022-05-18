@@ -1,0 +1,35 @@
+CREATE PROCEDURE sp_Clientes(
+        SELECT * from cliente, ciudad, tipodocumento, departamento, tipocliente
+            WHERE cliente.idTipoDocumento=tipoDocumento.idTipoDocumento
+            and departamento.idDepartamento=ciudad.idDepartamento
+            and cliente.idCiudad=ciudad.idCiudad
+            and tipoCliente.idTipoCliente=cliente.idTipoCliente
+)
+
+CREATE PROCEDURE sp_Insert_Clientes(
+	in documento int(20),
+	in primerNombre varchar(45),
+	in segundoNombre varchar(45),
+	in primerApellido varchar(45),
+	in segundoApellido varchar(45),
+	in email	varchar(45),
+	in idTipoDocumento int,
+	in fechaNacimiento date,
+	in idTipoCliente int,
+	in idCiudad int,
+	in telefono1 varchar(15),
+	in telefono2 varchar(15),
+	in direccion1 varchar(100),
+	in direccion2 varchar(100)
+)
+
+        INSERT INTO cliente (documento,primerNombre,segundoNombre,primerApellido,segundoApellido,email,idTipoDocumento,
+            fechaNacimiento,idTipoCliente,idCiudad,telefono1,telefono2,direccion1,direccion2)
+        VALUES
+            (documento,primerNombre,segundoNombre,primerApellido,segundoApellido,email,idTipoDocumento,fechaNacimiento,
+            idTipoCliente,idCiudad,telefono1,telefono2,direccion1,direccion2);
+
+CREATE PROCEDURE sp_Insert_Poliza(
+
+
+)
