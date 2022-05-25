@@ -1,0 +1,53 @@
+/* =========== Variables para estilos =========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* 1. Variables
+   ====================================================== */
+:root{
+    /* Colores principales
+       =========== */
+    --primary-color: #ed1c24;
+    --secondary-color: #ffffff;
+    --tertiary-color: #231f20;
+    --quaternary-color: #ebebec;
+    --quinary-color: #fafbfe;
+
+    /* Fuentes
+    =========== */
+    --font-family: 'Roboto', sans-serif;
+    --primary-font-size: 50px;
+    --secondary-font-size: 28px;
+    --tertiary-font-size: 18px;
+    --quaternary-font-size: 14px;
+
+    /* Tamaños imagenes
+    =========== */
+    --primary-image-size: 24px;
+    --secondary-image-size: 32px;
+    --tertiary-image-size: 42px;
+    --quaternary-image-size: 60px;
+
+    /* Sombras
+    =========== */
+    --primary-box-shadow: 0 5px 10px 1px #c6c6c6;
+    --secondary-box-shadow: 0 5px 10px 1px #a9a9a9;
+    --tertiary-box-shadow: 0 0 10px 0 #858383;
+    --quaternary-box-shadow: 0 0 15px 1px #c6c6c6;
+    --quinary-box-shadow: 0 5px 15px 1px #dad9d9;
+}
+
+/* 2. General
+   ====================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--quinary-color);
+}
+
+
