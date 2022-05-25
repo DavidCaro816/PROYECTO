@@ -1,0 +1,506 @@
+/*Cuadricula contenedor mayor*/
+.container{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: "navbar header_container"
+                         "navbar body_container"
+                         "navbar body_container";
+    position: relative;
+}
+/************************************************/
+
+/*Barra de navegación lateral*/
+.navbar{
+    width: 56px;
+    height: 100vh;
+    padding: 17px 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+    box-sizing: border-box;
+    grid-area: navbar;
+    transition: all 500ms;
+    background-color: #ED1C24;
+}
+
+/*Alineación de items de la barra de navegación*/
+.navbar_group,
+.navbar_header,
+.navbar_body,
+.navbar_footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.navbar_header{
+    margin-bottom: 15px;
+    padding: 4px;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+/*Iconos de la barra de navegación*/
+.icon_navbar{
+    width: 24px;
+    margin-top: 12px;
+    padding: 9px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+/*Hover iconos de la barra de navegación*/
+.icon_navbar:hover{
+    background-color: #231F20;
+}
+
+/*Tamaño de iconos de la barra de navegación*/
+.logo a img{
+    width: 33px;
+}
+
+.icon_navbar a img{
+    width: 24px;
+    height: 24px;
+}
+
+/*Texto de iconos*/
+.icon_navbar a span{
+    margin-left: 16px;
+    font-family: "Yu Gothic UI Semibold",sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+/*Alinear iconos de la barra de navegación con su texto correspondiente*/
+.icon_navbar a{
+    width: 176px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar_footer{
+    box-sizing: border-box;
+}
+
+/*Modal de configuración*/
+#modal_settings{
+    cursor: auto;
+}
+
+.modal_settings{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 42px;
+    left: 70px;
+    border-radius: 20px;
+    z-index: 100;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 350ms;
+    box-shadow: 0 0 10px 0 #858383;
+    background-color: white;
+}
+
+/*Contenedor titulo de modal*/
+.title_settings{
+    margin-bottom: 15px;
+}
+
+/*Titulo de modal*/
+.title_settings h3{
+    margin: 0;
+    font-size: 30px;
+}
+
+/*Botones del modal de configuración*/
+.container_buttons__modal_settings{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons__modal_settings{
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.buttons__modal_settings a{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.icon_modal_settings{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: #ED1C24;
+}
+
+.buttons__modal_settings a span{
+    font-size: 18px;
+    color: black;
+}
+/*************************************************************************/
+
+/*Cabecera*/
+.header_container{
+    padding: 17px 60px 17px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header_container;
+}
+
+.opciones{
+    display: flex;
+    align-items: center;
+}
+
+/*Tamaño icono menu*/
+.open_menu{
+    width: 24px;
+    height: 24px;
+    margin-right: 45px;
+    cursor: pointer;
+}
+
+/*Grupo de botones de cabecera -> Perfil y Notificaciones*/
+.header_group{
+    display: flex;
+}
+
+/*Tamaño de iconos*/
+.icon_profile,.icon_notification_bell{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.icon_profile{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px 1px #c6c6c6;
+    background-color: white;
+}
+
+.icon_profile img{
+    width: 35px;
+    height: 35px;
+}
+
+/*Hover de iconos ->  Perfil y Notificaciones*/
+.icon_profile:hover{
+    box-shadow: 0 5px 10px 1px #a9a9a9;
+}
+
+.icon_notification_bell:hover  {
+    box-shadow: 0 5px 10px 1px #c6c6c6;
+}
+/***************************************************************/
+
+
+/*Cuerpo del contenedor -> Titulo y datos*/
+.body_container{
+    display: flex;
+    flex-direction: column;
+    grid-area: body_container;
+}
+
+/*Encabezado->Titulo del cuerpo del contenedor y botones */
+.body__header_container{
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+/*Titulo del cuerpo del contenedor*/
+.title h2{
+    color: #ED1C24;
+    line-height: 53px;
+    font-size: 53px;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    margin: 0;
+}
+
+/*Botones -> Nuevo y buscar*/
+.buttons{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/*Botón 'nuevo'*/
+.new_button button{
+    width: 200px;
+    margin-left: 70px;
+    padding: 15px 15px 15px 0;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 300ms;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    background: #ED1C24;
+}
+
+/*Tamaño icono botón 'nuevo'*/
+.new_button button img{
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+}
+
+/*Hover botón 'nuevo*/
+.new_button button:hover{
+    box-shadow: 0 5px 10px 1px #c6c6c6;
+}
+
+/*Contenedor input 'buscar'*/
+.search{
+    width: 216px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: all 290ms;
+    box-shadow: 0 5px 10px 1px #c6c6c6;
+    background-color: white;
+    position: relative;
+}
+
+/*Input 'buscar'*/
+.search input {
+    width: 180px;
+    height: 50px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+}
+
+/*Label input 'buscar -> icono de input*/
+#label_search {
+    width: 45px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+/*Hover input 'buscar*/
+.search:hover{
+    box-shadow: 0 5px 10px 1px #a9a9a9;
+}
+
+
+/*Contenedor de datos*/
+.container_data{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 70px 60px 20px 120px;
+    box-sizing: border-box;
+}
+
+/*Contenedor trasero*/
+.back_container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 1px #c6c6c6;
+    background-color: white;
+}
+
+/*Contenedor delantero*/
+.forward_container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 1px #dad9d9;
+    border-radius: 30px;
+    background-color: white;
+}
+
+/*Contenedor información*/
+.data{
+    height: 68%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow-y: scroll;
+}
+
+/*Datos*/
+.data p{
+    margin: 0;
+    padding: 0 15px 18px 15px;
+}
+
+/*Scrollbar datos*/
+.data::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 30px;
+}
+
+.data::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.data::-webkit-scrollbar-thumb {
+    background-color: #ED1C24;
+    border-radius: 10px;
+    background-clip: content-box;
+}
+
+/*Filtros*/
+.filters{
+    padding: 15px 20px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filtro_departamento,
+.filtro_ciudad,
+.filtro_fecha,
+.filtro_cliente,
+.filtro_seguro,
+.filtro_aseguradora,
+.filtro_estado,
+.boton_filtrar,
+.boton_limpiar{
+}
+
+.boton_filtrar,
+.boton_limpiar{
+    display: flex;
+    align-items: center;
+}
+
+.boton_filtrar button,
+.boton_limpiar button{
+    width: 140px;
+    height: 40px;
+    padding: 0 10px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+}
+
+.boton_filtrar button{
+    margin-right: 20px;
+    background-color: #ED1C24;
+}
+
+.boton_limpiar button{
+    background-color: #231F20;
+}
+
+.botones_filtro{
+    display: flex;
+}
+
+.filtro{
+    width: 160px;
+    height: 45px;
+    margin: 10px 20px 10px 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 18px;
+    transition: all 300ms;
+    cursor: pointer;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+}
+
+.filtro:hover{
+    box-shadow: 0 5px 10px 1px #c6c6c6;
+}
+/*tabla Clientes*/
+.tablaClientes{
+    text-align:center;
+    margin-top: 40px;
+    border-collapse: collapse;
+    margin-left: 20px;
+    border:none;
+}
+
+.tablaClientes th{
+    font-family: "arial",serif;
+    font-weight: 750;
+    height: 80px;
+    width: 140px;
+    border: none;
+}
+
+.tablaClientes td{
+    width: 160px;
+    height: 50px;
+    border:none;
+}
+
+.tablaClientes tr {
+    border-bottom: 1px solid #ccc;
+}
+/*boton Eliminar y Editar*/
+.btEditar{
+    background-color: #E91D24;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} .btEditar:hover {
+      box-shadow: 1px 1px 5px #E91D24;
+  }
+
+.btEliminar{
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+} .btEliminar:hover {
+      box-shadow: 1px 1px 5px black;
+  }
+

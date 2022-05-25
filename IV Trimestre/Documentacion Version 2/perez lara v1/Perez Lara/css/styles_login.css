@@ -1,0 +1,328 @@
+/*Contenedor total*/
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor formularios y tapa*/
+.container__login_register{
+    width: 1080px;
+    height: 699px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Contenedor de formularios*/
+.forms_container{
+    width: 1080px;
+    display: flex;
+}
+/****************************/
+
+/*Contenedor formulario de registro y contenedor formulario de inicio de sesión*/
+.register_form_container,
+.login_form_container{
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #231F20;
+}
+
+.register_form_container{
+    transform: scale(0.9);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.login_form_container{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+/*******************************/
+
+/*Formulario de registro y formulario de inicio de sesión*/
+.register_form{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0.9);
+    border-radius: 30px;
+    background-color: white;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+/*Cuerpo del formulario de registro ->Inputs y select */
+.register_form_body{
+    display: flex;
+    flex-direction: column;
+}
+
+.register_form_body input,
+.register_form_body select{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    text-indent: 17px;
+    border: none;
+    border-radius: 20px;
+    outline: 1px solid transparent;
+    transition: all 0.4s;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 14px;
+    background-color: #F6F6F6;
+}
+
+.register_form_body input:focus,
+.register_form_body select:focus{
+    outline: 1px solid #231F20;
+    transition: all 0.5s;
+}
+
+/*Grupo de inputs del formulario de registro*/
+.inputs_group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputs_group input,
+.inputs_group select{
+    width: 220px;
+}
+
+#document_type{
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    outline: 1px solid transparent;
+    background-color: #F6F6F6;
+}
+
+/*Placeholders inputs formulario registro*/
+.inputs{
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.input_register{
+    position: relative;
+}
+
+.register_form_body label{
+    padding: 2px;
+    position: absolute;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 14px;
+    left: 57px;
+}
+
+#surnames + label,#document_number +label{
+    left: 297px;
+}
+
+#document_type{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-indent: 17px;
+}
+
+#label_document_type{
+    visibility: hidden;
+}
+
+/*Boton del formulario de registro*/
+.register_form_footer{
+    margin-top: 17px;
+    text-align: center;
+}
+
+/*Botones de 'Crear cuenta' e 'Iniciar sesión'*/
+.button{
+    width: 220px;
+    height: 50px;
+    padding: 0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ED1C24;
+}
+
+/*Formulario de inicio de sesión*/
+.login_form_body,
+.login_form_footer{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Encabezado del formulario de inicio de sesión*/
+.login_form_header{
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 1px #c6c6c6;
+    background-color: white;
+}
+
+.login_form_header img{
+    width: 100px;
+    height: 100px;
+}
+
+/*Cuerpo del formulario de inicio de sesión*/
+.login_form_body__container{
+    margin-top: 65px;
+    border-radius: 30px;
+    background: white;
+}
+
+.login_form_body{
+    width: 100%;
+    padding: 105px 40px 10px 40px;
+    box-sizing: border-box;
+}
+
+/*Inputs del formulario de inicio de sesión*/
+.input_login{
+    width: 100%;
+    height: 50px;
+    text-indent: 17px;
+    border: none;
+    border-radius: 20px;
+    outline: 1px solid transparent;
+    transition: all 0.4s;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #F6F6F6;
+}
+
+.input_login:focus{
+    outline: 1px solid #231F20;
+    transition: all 0.5s;
+}
+
+/*Placeholder inputs formulario inicio de sesión*/
+.username{
+    margin-bottom: 17px;
+}
+
+.inputs_login{
+    display: flex;
+    align-items: center;
+}
+
+.input_login{
+    position: relative;
+}
+
+.inputs_login label{
+    padding: 2px;
+    position: absolute;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 14px;
+    left: 59px;
+}
+
+
+/*Checkbox 'recordarme' y 'olvidaste tu contraseña'*/
+.footer_group,
+.remember_me{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_group{
+    margin-bottom: 40px;
+    padding: 0 25px;
+}
+
+#remember_me{
+    cursor: pointer;
+}
+
+#remember_me + label{
+    margin-left: 5px;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.footer_group a{
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+}
+
+/*Boton 'Iniciar sesión'*/
+.button_log{
+    padding: 0 40px 40px 40px;
+}
+
+/*Contenedor tapa*/
+.cover_container{
+    width: 660px;
+    height: 699px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+    box-shadow: 0 0 13px 5px rgb(0 0 0 / 25%);
+    background-image: url("../icons/login/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+
+.cover_button{
+    width: 250px;
+    height: 54px;
+    padding: 0;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    font-family: "Yu Gothic UI Semibold", sans-serif;
+    font-size: 18px;
+    background-color: #231F20;
+}
+
+#message{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button_open_forms{
+    margin-top: 10px;
+    cursor: pointer;
+}
