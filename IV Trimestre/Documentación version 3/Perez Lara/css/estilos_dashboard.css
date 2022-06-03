@@ -1,0 +1,8 @@
+@import "template/estilos_busqueda.css";
+@import "template/estilos_filtros.css";
+
+/* Marcador de posición
+   =========== */
+#dashboard{
+    background-color: var(--tertiary-color);
+}

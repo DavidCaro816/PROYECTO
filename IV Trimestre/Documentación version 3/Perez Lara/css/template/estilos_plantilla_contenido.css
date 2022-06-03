@@ -1,0 +1,113 @@
+/* =========== Estilos para plantilla del contenido principal =========== */
+
+@import "estilos_filtros.css";
+
+/* 1. Contenedor de datos
+   ====================================================== */
+.data_container{
+    height: calc(100% - 148px);
+    margin: 30px 105px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    position: relative;
+    background-color: var(--secondary-color);
+    box-shadow: var(--quinary-box-shadow);
+}
+
+/* .1.1 Contenedor trasero
+   =========== */
+.back_container{
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: var(--quaternary-box-shadow);
+    background-color: var(--secondary-color);
+}
+
+/* 1.2 Contenedor filtros
+   =========== */
+.filter_group_container{
+    width: 100%;
+    padding: 20px 20px 14px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    user-select: none;
+}
+
+/* Botones de filtros -> Filtrar y/o limpiar
+   =========== */
+#button_filter{
+    margin-right: 10px;
+    background-color: var(--primary-color);
+}
+
+#button_clean{
+    background-color: var(--tertiary-color);
+}
+
+/* 1.3 Tabla de datos --> contenedor base
+ * --> Evita el desborde del scrollbar del contenedor de la tabla de datos
+   =========== */
+.table_container{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+/* Contenedor de la tabla de datos
+   =========== */
+.data{
+    width: 100%;
+    height: 100%;
+    padding: 0 30px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+/* Tabla
+   =========== */
+.table{
+    text-align: center;
+    font-size: var(--quinary-font-size);
+    border-collapse: collapse;
+}
+
+/* Encabezado de la tabla
+   =========== */
+.table thead{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+}
+
+.table thead tr th{
+    padding: 10px;
+}
+
+/* Filas de la tabla
+   =========== */
+.table tbody tr{
+    height: 53px;
+    cursor: pointer;
+}
+
+.table tbody tr:hover{
+    background: var(--quaternary-color);
+}
+
+/* Columnas de la tabla
+   =========== */
+.table tbody tr td{
+    padding: 10px;
+    border-bottom: 1px solid var(--quaternary-color);
+}

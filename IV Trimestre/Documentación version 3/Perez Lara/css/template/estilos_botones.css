@@ -1,0 +1,59 @@
+.primary_button,
+.secondary_button,
+.tertiary_button,
+.quaternary_button{
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+}
+
+.button2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary_button{
+    width: 170px;
+    height: 48px;
+    line-height: 0;
+    border-radius: 17px;
+    transition: ease-in 300ms;
+}
+.primary_button img{
+    width: var(--primary-image-size);
+    height: var(--primary-image-size);
+    margin-right: 15px;
+}
+
+.primary_button:hover{
+    box-shadow: var(--primary-box-shadow);
+}
+
+.secondary_button{
+    width: 140px;
+    height: 42px;
+    border-radius: 14px;
+    font-size: var(--quinary-font-size);
+    transition: linear 300ms;
+}
+
+.secondary_button:hover{
+    box-shadow: var(--quinary-box-shadow);
+}
+
+.tertiary_button{
+    width: 250px;
+    height: 54px;
+}
+
+.quaternary_button{
+    width: 220px;
+    height: 50px;
+}
+
+.tertiary_button,
+.quaternary_button{
+    border-radius: 20px;
+    font-size: var(--quaternary-font-size);
+}

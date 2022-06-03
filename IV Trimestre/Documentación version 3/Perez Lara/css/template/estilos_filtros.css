@@ -1,0 +1,20 @@
+/* =========== Estilos para filtros =========== */
+
+/* Filtros
+   =========== */
+.filter{
+    width: 180px;
+    height: 42px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    font-size: var(--quinary-font-size);
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.filter:hover{
+    box-shadow: var(--primary-box-shadow)
+}

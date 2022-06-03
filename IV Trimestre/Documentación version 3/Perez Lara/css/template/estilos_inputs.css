@@ -1,0 +1,89 @@
+/* Contenedor de input y su advertencia
+   =========== */
+.group-input{
+    width: 100%;
+    min-height: 65px;
+    max-height: 83px;
+    position: relative;
+}
+
+/* Tamaño de fuente para inputs
+   =========== */
+.group-input input,
+.group-input label,
+.group-input div{
+    font-size: var(--quinary-font-size);
+}
+
+/* Tamaño de fuente para alertas
+   =========== */
+.alert{
+    font-size: var(--senary-font-size);
+    color: var(--primary-color);
+}
+
+
+/* Label de input
+   =========== */
+.group-input label{
+    padding: 2px;
+    left: 14px;
+    position: absolute;
+    cursor: text;
+    transition: top 220ms;
+    background-color: var(--secondary-color);
+}
+
+/* Input para llenar datos del formulario
+   =========== */
+.input{
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid var(--quaternary-color);
+    border-radius: 17px;
+}
+
+/* Alineación texto inputs
+   =========== */
+.inputs,
+.select{
+    display: flex;
+    align-items: center;
+}
+
+.select{
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
+/* Contenedor de opciones de inputs tipo select
+   =========== */
+.content{
+    width: 100%;
+    height: 0;
+    top: 51px;
+    border-radius: 17px;
+    position: absolute;
+    z-index: 3;
+    display: none;
+    overflow: hidden;
+    box-shadow: var(--primary-box-shadow);
+    background-color: var(--secondary-color);
+}
+
+/* Opciones de inputs tipo select
+   =========== */
+.content p{
+    width: 211px;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.content p:hover{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}

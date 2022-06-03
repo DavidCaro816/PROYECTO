@@ -1,0 +1,55 @@
+/* =========== Variables para estilos =========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* 1. Variables
+   ====================================================== */
+:root{
+    /* Colores
+       =========== */
+    --primary-color: #ed1c24;
+    --secondary-color: #ffffff;
+    --tertiary-color: #231f20;
+    --quaternary-color: #ebebec;
+    --quinary-color: #fafbfe;
+
+    /* Fuentes
+    =========== */
+    --font-family: 'Roboto', sans-serif;
+    --primary-font-size: 50px;           /*Titulos*/
+    --secondary-font-size: 32px;          /*Titulos para modal y/o subtitulos*/
+    --tertiary-font-size: 28px;         /*Subtitulos*/
+    --quaternary-font-size: 18px;          /*Opción 2 para texto de botones. Opción 1-> es por defecto (16px) */
+    --quinary-font-size: 14px;        /*Texto normal*/
+    --senary-font-size: 13px;           /*Mensajes de alerta*/
+
+    /* Tamaños imagenes
+    =========== */
+    --primary-image-size: 24px;
+    --secondary-image-size: 32px;
+    --tertiary-image-size: 42px;
+    --quaternary-image-size: 60px;
+
+    /* Sombras
+    =========== */
+    --primary-box-shadow: 0 5px 10px 1px #c6c6c6;   /*Primera sombra para elementos*/
+    --secondary-box-shadow: 0 5px 10px 1px #a9a9a9; /*Segunda sombra para elementos*/
+    --tertiary-box-shadow: 0 0 10px 0 #858383;      /*Modales*/
+    --quaternary-box-shadow: 0 0 15px 1px #c6c6c6;  /*Sombra 1 para contenedores -> Mas oscura*/
+    --quinary-box-shadow: 0 5px 15px 1px #dad9d9;   /*Sombra 2 para contenedores*/
+}
+
+/* 2. General
+   ====================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--quinary-color);
+}
+
+

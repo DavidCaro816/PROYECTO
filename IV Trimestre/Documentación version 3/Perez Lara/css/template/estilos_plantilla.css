@@ -1,0 +1,341 @@
+/* =========== Estilos para plantilla base =========== */
+
+@import "general.css";
+@import "estilos_scrollbar.css";
+
+/* 1. Layout
+   ====================================================== */
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: "sidebar header"
+                         "sidebar main"
+                         "sidebar main";
+}
+
+
+/* 2. Encabezado
+   ====================================================== */
+.header{
+    padding: 17px 60px 17px 17px;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+    grid-area: header;
+}
+
+/* Contenedores de botones
+   =========== */
+.group-1,
+.group-2{
+    display: flex;
+    align-items: center;
+}
+
+/* Icono menu
+   =========== */
+.menu{
+    width: var(--tertiary-image-size);
+    height: var(--tertiary-image-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: linear 80ms;
+}
+
+.menu:hover{
+    background-color: var(--quaternary-color)
+}
+
+/* Secciones -> perfil y notificaciones
+   =========== */
+.notifications,
+.profile{
+    position: relative;
+}
+
+/* Icono campana de notificaciones y foto de perfil
+   =========== */
+.icon_notifications,
+.icon_profile{
+    border-radius: 50%;
+    box-shadow: var(--primary-box-shadow);
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+    background-color: var(--secondary-color);
+}
+
+.icon_notifications:hover,
+.icon_profile:hover{
+    box-shadow: var(--secondary-box-shadow);
+}
+
+.icon_notifications,
+#profile{
+    width: var(--tertiary-image-size);
+    height: var(--tertiary-image-size);
+}
+
+.icon_notifications{
+    margin: 0 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 3. Barra de navegación
+   ====================================================== */
+.sidebar{
+    width: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: sidebar;
+    user-select: none;
+    overflow: hidden;
+    transition: width 300ms;
+    background-color: var(--primary-color);
+}
+
+/* Despliegue de barra de navegación
+   =========== */
+.sidebar-active{
+    width: 180px;
+}
+
+/* Listas
+   =========== */
+.sidebar_group,
+.sidebar_footer{
+    margin: 0;
+    padding: 23px 7px 23px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+/* Enlaces
+   =========== */
+.logo,
+.icon_sidebar{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar_group li:first-child{
+    margin-bottom: 20px;
+}
+
+.icon_sidebar{
+    width: 100%;
+    padding: 8px;
+    border-radius: 9px;
+    font-size: var(--quinary-font-size);
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: background-color 300ms;
+    white-space: nowrap;
+}
+
+.icon_sidebar:hover{
+    background-color: var(--tertiary-color)
+}
+
+/* Icono del enlace
+   =========== */
+.logo img{
+    width: var(--secondary-image-size);
+    margin-left: 5px;
+}
+.icon_sidebar img{
+    width: var(--primary-image-size);
+    height: var(--primary-image-size);
+    margin-right: 18px;
+}
+
+/* 4. Modales
+   ====================================================== */
+.modal{
+    padding: 20px;
+    z-index: 2;
+    position: absolute;
+    border-radius: 20px;
+    user-select: none;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: var(--tertiary-box-shadow);
+    background-color: var(--secondary-color);
+    transition: opacity 180ms linear, visibility 180ms linear;
+}
+
+/* Modal activo
+   =========== */
+.modal-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Link de modales
+   =========== */
+.modal a{
+    border-radius: 12px;
+    font-size: var(--quinary-font-size);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.modal a:hover{
+    background-color: var(--quaternary-color);
+}
+
+.notifications_modal a ~ a,
+.settings_modal a,
+.profile_modal hr ~ a{
+    margin-top: 10px;
+}
+
+.settings_modal a,
+.profile_modal a{
+    padding: 3px;
+}
+
+/* Contenedor icono de modales
+   =========== */
+.container_modal_icon{
+    width: var(--tertiary-image-size);
+    height: var(--tertiary-image-size);
+    margin-right: 10px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ed1c24;
+}
+
+/* Titulo modal de configuración y modal de notificaciones
+   =========== */
+.settings_modal h1,
+.notifications_modal h1{
+    font-size: var(--tertiary-font-size);
+    font-weight: 500;
+}
+
+/* Modal de configuración
+   =========== */
+.settings_modal{
+    width: 249px;
+    bottom: 42px;
+    left: 72px;
+}
+
+.settings_modal h1{
+    margin: 0 0 3px 0;
+}
+
+/* Modal de notificaciones
+   =========== */
+.notifications_modal{
+    width: 340px;
+    height: 600px;
+    padding: 0;
+    overflow-y: hidden;
+    top: 58px;
+    right: -5px;
+}
+
+.notifications_modal h1{
+    margin: 20px 22px 10px 22px;
+}
+
+/* Contenedor de mensajes de notificaciones
+   =========== */
+.container_message{
+    height: 100%;
+    padding: 0 10px 0 22px;
+    overflow-y: scroll;
+}
+
+/* Mensaje del modal de notificaciones
+   =========== */
+.message_notification{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message{
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Negrita titulo de la notificación
+   =========== */
+.message span:first-child{
+    font-weight: 600;
+}
+
+/* Texto de la notificación
+   =========== */
+.message span:first-child + span{
+    margin-left: 12px;
+}
+
+/* Indicador de nueva notificación
+   =========== */
+.indicator{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+/* Modal de perfil
+   =========== */
+.profile_modal{
+    width: 265px;
+    top: 60px;
+    right: -5px;
+}
+
+/* Foto de perfil
+   =========== */
+#profile1{
+    width: var(--quaternary-image-size);
+    height: var(--quaternary-image-size);
+    border-radius: 50%;
+}
+
+/* Información modal de perfil
+   =========== */
+.info{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info span:first-child{
+    font-size: var(--quaternary-font-size);
+    font-weight: 600;
+}
+
+/* Separador modal de perfil
+   =========== */
+.profile_modal hr{
+    width: 100%;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
+}
