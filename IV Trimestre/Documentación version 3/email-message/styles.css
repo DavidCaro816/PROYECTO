@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@100;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&family=Roboto:ital@1&display=swap');
+
+:root {
+    --primary-color: #ed1c24;
+    --secondary-color: #ffffff;
+    --tertiary-color: #231f20;
+    --quaternary-color: #ebebec;
+    --quinary-color: #fafbfe;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    user-select: none;
+}
+
+img{
+    width: 20px;
+    height: 25px;
+}
+
+.content-data {
+    display: block;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: var(--quaternary-color);
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--quaternary-color);
+}
+
+.main-card{
+    background-color: var(--secondary-color);
+    font-size: 16px;
+    width: 350px;
+    padding: 20px 35px;
+    box-shadow: 0px 11px 19px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.header-card{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-message{
+    font-weight: bold;
+    font-size: 18px;
+    color: #3a4158;
+}
+
+.message1-card{
+    font-weight: normal;
+    font-size: 13px;
+    color: #808593;
+    margin-bottom: 8px;
+}
+
+.message2-card a{
+    color: #3a4158;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.dates-user{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.dates-user a{
+    display: flex;
+    flex-direction: column;
+    color: #808593;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.question-message{
+    display: flex;
+    justify-content: center;
+    margin: 7px;
+}
+
+.question-message a{
+    color: #3a4158;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-aceptar{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    width: 85px;
+    height: 35px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-denegar{
+    background: var(--tertiary-color);
+    color: var(--secondary-color);
+    border: none;
+    width: 85px;
+    height: 35px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
