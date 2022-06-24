@@ -1,0 +1,78 @@
+/* =========== Estilos para plantilla del encabezado del contenido principal =========== */
+
+@import "estilos_busqueda.css";
+@import "estilos_botones.css";
+@import "estilos_inputs.css";
+
+/* Encabezado contenido principal
+   =========== */
+.header_main{
+    padding-left: 29px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 20px;
+}
+
+/* Titulo
+   =========== */
+#title{
+    margin: 0;
+    font-size: var(--primary-font-size);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Sección 'Nueva acción'
+   =========== */
+.new_action{
+    margin-left: 50px;
+}
+
+/* Botón 'Nuevo'
+   =========== */
+#new_button{
+    padding-right: 15px;
+    background-color: var(--primary-color);
+}
+
+/* Contenedor fondo modal 'Nuevo'
+   =========== */
+.new{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgb(35 35 35 / 50%);
+    transition: opacity 300ms;
+}
+
+/* Contenedor fondo modal 'Nuevo' ->Activo
+   =========== */
+.new_active{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 100ms;
+}
+
+/* Opacidad modal 'Nuevo'
+   =========== */
+.form{
+    opacity: 0;
+    transition: all 400ms;
+}
+
+/* Modal 'Nuevo' -> Activo
+   =========== */
+.form_active{
+    opacity: 1;
+    transform: translateY(100px);
+    transition: transform 640ms;
+}

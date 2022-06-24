@@ -1,0 +1,36 @@
+/* =========== Estilos para plantilla del contenido principal =========== */
+
+@import "estilos_filtros.css";
+@import "estilos_tabla.css";
+
+/* 1. Contenedor de datos
+   ====================================================== */
+.data_container{
+    max-height: 1820px;
+    height: calc(100% - 148px);
+    margin: 30px 90px 60px 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+    box-shadow: var(--quinary-box-shadow);
+}
+
+/* .1.1 Contenedor trasero
+   =========== */
+.back_container{
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: var(--quaternary-box-shadow);
+    background-color: var(--secondary-color);
+}
+
+.table{
+    min-width: 1200px;
+}

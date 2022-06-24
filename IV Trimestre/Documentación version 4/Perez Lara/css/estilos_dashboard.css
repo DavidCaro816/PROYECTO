@@ -1,0 +1,236 @@
+@import "template/estilos_busqueda.css";
+@import "template/estilos_filtros.css";
+
+/* Marcador de posición
+   =========== */
+#dashboard{
+    background-color: var(--tertiary-color);
+}
+
+/* 1. Contenido principal
+   ====================================================== */
+main{
+    max-height: 1820px;
+    margin: 12px 50px 20px 50px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: min-content 1fr;
+    gap: 20px;
+}
+
+/* 2. Sección de cotizaciones recientes
+   ====================================================== */
+.recent{
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado de la sección de cotizaciones recientes
+   =========== */
+.recent header{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.recent header h1{
+    margin: 0;
+    font-size: var(--primary-font-size);
+    font-weight: 500;
+}
+
+/* Sombra para filtros de la sección de cotizaciones recientes
+   =========== */
+.filter{
+    box-shadow: var(--primary-box-shadow);
+}
+
+/* Tabla de datos --> contenedor base
+ * --> Evita el desborde del scrollbar del contenedor de la tabla de datos
+   =========== */
+.table_container{
+    padding-top: 25px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: var(--quaternary-box-shadow);
+    background: var(--secondary-color);
+}
+
+/* 3. Sección de totales
+   ====================================================== */
+.totals{
+    margin-top: 77px;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+    gap: 20px;
+    box-shadow: var(--primary-box-shadow);
+    background: var(--secondary-color);
+}
+
+/* Sección de totales -> Resumen y pólizas
+   =========== */
+.summary,
+.policies{
+    height: 100%;
+    display: flex;
+}
+
+/* Sección de totales -> Resumen
+   =========== */
+.summary{
+    flex-direction: column;
+    flex: 0.3;
+    gap: 8px;
+}
+
+/* Items de la sección de resumen
+   =========== */
+.item_data_summary{
+    padding: 7px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    line-height: 1;
+    border-radius: 14px;
+    background-color: var(--primary-color);
+}
+
+/* Total del item de la sección de resumen
+   =========== */
+.total_left{
+    width: 45px;
+}
+
+/* Separador para sección de totales
+   =========== */
+.vertical_separator{
+    width: 2px;
+    height: 85%;
+    background-color: var(--tertiary-color);
+}
+
+/* Sección de totales -> Pólizas
+   =========== */
+.policies{
+    flex-grow: 0.7;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.policies header{
+    width: calc(100% - 20px);
+    height: 20px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    top: -40px;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    background-color: var(--tertiary-color);
+}
+
+.policies header h1{
+    margin: 0;
+    padding: 14px 10px 10px 10px;
+    bottom: 0;
+    font-size: var(--tertiary-font-size);
+    font-weight: 500;
+    position: absolute;
+    border-radius: 20px 20px 0 0;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+/* Items de la sección de pólizas
+   =========== */
+.item_data_policies{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    border-radius: 14px;
+    background-color: var(--tertiary-color);
+}
+
+/* Titulo de item de la sección de pólizas
+   =========== */
+.title_item_data_right{
+    height: 36px;
+}
+
+/* Total del item de la sección de pólizas
+   =========== */
+.total_right{
+    padding: 5px 10px;
+    border-radius: 7px;
+    background-color: var(--primary-color);
+}
+
+/* 3. Sección de estadísticas
+   ====================================================== */
+.statistics{
+    display: flex;
+    gap: 20px;
+}
+
+/* 3.1 Sección de seguros
+   ====================================================== */
+.insurance{
+    margin: 0 14px;
+    flex: 1;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: var(--quaternary-box-shadow);
+    background: var(--secondary-color);
+}
+
+.insurance header{
+    width: calc(100% + 28px);
+    left: -14px;
+    top: 15px;
+    text-align: center;
+    border-radius: 30px;
+    position: absolute;
+    background-color: var(--primary-color);
+}
+
+.insurance header h3{
+    color: var(--secondary-color);
+    font-size: var(--quaternary-font-size);
+    font-weight: 500;
+}
+
+.icons_insurance{
+    margin-bottom: 20px;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.icon_insurance{
+    padding: 8px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: var(--primary-box-shadow);
+    background-color: var(--secondary-color);
+}
+
+/* 3.2 Sección de aseguradoras
+   ====================================================== */
+.insurers{
+    flex: 1;
+    border-radius: 30px;
+    box-shadow: var(--quaternary-box-shadow);
+    background-color: var(--primary-color);
+}

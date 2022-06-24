@@ -1,0 +1,64 @@
+/* Marcador de posición
+   =========== */
+#clients{
+    background-color: var(--tertiary-color);
+}
+
+/* Contenedor formulario
+   =========== */
+.form{
+    width: 720px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+}
+
+/* Encabezado formulario
+   =========== */
+.header_form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Titulo formulario
+   =========== */
+.header_form > h1{
+    margin: 0;
+    font-size: var(--secondary-font-size);
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
+
+/* Icono para cerrar formulario
+   =========== */
+.header_form img{
+    cursor: pointer;
+}
+
+/* Cuerpo del formulario (Datos a llenar)
+   =========== */
+.body_form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(213px,1fr));
+    gap: 15px;
+}
+
+/* Contenedor botones del formulario
+   =========== */
+.footer_form{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+#clean_form{
+    background-color: var(--tertiary-color);
+}
+
+#send_form {
+    background-color: var(--primary-color);
+}
