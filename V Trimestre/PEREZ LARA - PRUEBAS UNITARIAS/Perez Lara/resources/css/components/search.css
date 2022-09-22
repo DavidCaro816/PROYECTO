@@ -1,0 +1,78 @@
+/* =========== Estilos para input de busqueda =========== */
+
+/* Contenedor input 'Buscar'
+   =========== */
+.search {
+    width: 196px;
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+    transition: box-shadow 300ms;
+    box-shadow: var(--primary-box-shadow);
+    position: relative;
+    background-color: var(--secondary-color);
+}
+
+.search:hover{
+    box-shadow: var(--secondary-box-shadow);
+}
+
+/* Input 'Buscar'
+   =========== */
+.input_search {
+    width: 125px;
+    height: 48px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 17px 0 0 17px;
+    outline: none;
+}
+
+/* Contenedor icono input 'Buscar'
+   =========== */
+.container_icon_search {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container_icon_search:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Icono input 'Buscar'
+   =========== */
+.container_icon_search img {
+    width: var(--primary-image-size);
+    height: var(--primary-image-size);
+}
+
+
+.container_icon_clear_search {
+    position: absolute;
+    right: 36px;
+    z-index: 1;
+}
+
+.input_search:placeholder-shown ~ .container_icon_clear_search {
+    display: none;
+}
+
+/* Label input 'Buscar' -> Icono de input
+   =========== */
+.search label {
+    width: 71px;
+    height: 100%;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    right: 0;
+    border-radius: 0 17px 17px 0;
+    position: absolute;
+    cursor: text;
+}

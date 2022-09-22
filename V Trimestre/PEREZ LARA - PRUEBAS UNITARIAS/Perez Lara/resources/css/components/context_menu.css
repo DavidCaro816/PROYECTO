@@ -1,0 +1,84 @@
+/* Menú contextual -> oculto
+   =========== */
+.context_menu {
+    margin: 0;
+    padding: 0;
+    width: 188px;
+    list-style: none;
+    font-size: var(--quinary-font-size);
+    border-radius: 17px;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    visibility: hidden;
+    user-select: none;
+    opacity: 0;
+    transition: height 300ms;
+    box-shadow: var(--tertiary-box-shadow);
+    background: var(--secondary-color);
+}
+
+/* Menú contextual -> visible
+  =========== */
+.context_menu_active {
+    height: fit-content;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Opciones (acciones) de menú contextual
+  =========== */
+.context_menu .action:first-child{
+    border-radius: 17px 17px 0 0;
+}
+
+.context_menu .action:last-child{
+    border-radius: 0 0 17px 17px;
+}
+
+.action {
+    padding: 8px 14px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 300ms;
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.container_icon_action {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    background-color: var(--secondary-color);
+}
+
+.action:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.modal_confirm{
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: space-between;
+    position: absolute;
+}
+
+#warning_modal{
+    width: var(--quaternary-image-size);
+    height: var(--quaternary-image-size);
+    align-self: center;
+}
+
+.modal_confirm .footer_modal{
+    justify-content: center;
+}

@@ -1,0 +1,7 @@
+@import "components/base/titulo_encabezado_contenido.css";
+
+/* Marcador de posición
+   =========== */
+#templates {
+    background-color: var(--tertiary-color);
+}

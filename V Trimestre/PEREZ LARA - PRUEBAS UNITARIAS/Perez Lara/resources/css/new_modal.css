@@ -1,0 +1,91 @@
+/* Contenedor formulario
+   =========== */
+   .form{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container_form{
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+}
+
+/* Encabezado formulario
+   =========== */
+.header_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Titulo formulario
+   =========== */
+.header_form > h1 {
+    margin: 0;
+    font-size: var(--secondary-font-size);
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
+
+/* Icono para cerrar formulario
+   =========== */
+.header_form img {
+    cursor: pointer;
+}
+
+/* Cuerpo del formulario (Datos a llenar)
+   =========== */
+.body_form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(213px, 1fr));
+    gap: 15px;
+}
+
+/* Contenedor botones del formulario
+   =========== */
+#new_modal .footer_modal{
+    justify-content: flex-end;
+}
+
+.footer_modal {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_modal button:first-child{
+    background-color: var(--tertiary-color);
+}
+
+.footer_modal button:nth-child(2){
+    background-color: var(--primary-color);
+}
+
+.alert_request{
+    width: max-content;
+    padding: 15px 20px;
+    border-radius: 17px;
+    top: 0;
+    left: 50%;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms, visibility 300ms, transform 300ms;
+    transform: translate(-50%,-50%);
+    color: var(--secondary-color);
+    background: var(--tertiary-color);
+}
+
+.alert_success{
+    visibility: visible;
+    opacity: 1;
+    animation: success 1s linear;
+}
+
+@keyframes success {
+    25%{transform: translate(-50%,-50%) rotateZ(5deg)}
+    50%{transform: translate(-50%,-50%) rotateZ(-5deg)}
+    75%{transform: translate(-50%,-50%) rotateZ(5deg)}
+}
+

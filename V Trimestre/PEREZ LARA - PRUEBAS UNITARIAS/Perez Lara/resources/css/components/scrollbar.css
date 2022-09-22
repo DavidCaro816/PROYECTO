@@ -1,0 +1,14 @@
+/* =========== Estilos para scrollbar =========== */
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: none;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
+}

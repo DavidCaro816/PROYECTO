@@ -1,0 +1,98 @@
+/* =========== Estilos para botones =========== */
+
+/* Botones
+   =========== */
+.primary_button,
+.secondary_button,
+.tertiary_button,
+.quaternary_button,
+.quinary_button {
+    color: var(--secondary-color);
+    cursor: pointer;
+    border: none;
+    transition: transform 270ms, box-shadow 270ms;
+}
+
+.primary_button:hover,
+.secondary_button:hover,
+.tertiary_button:hover,
+.quaternary_button:hover,
+.quinary_button:hover {
+    transform: scale(1.02);
+}
+
+.primary_button:active,
+.secondary_button:active,
+.tertiary_button:active,
+.quaternary_button:active,
+.quinary_button:active {
+    transform: scale(0.98);
+}
+
+.primary_button:hover,
+.secondary_button:hover {
+    box-shadow: var(--secondary-box-shadow);
+}
+
+/* Para botones con imagenes
+   =========== */
+.button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Primer botón
+   =========== */
+.primary_button {
+    width: 170px;
+    height: 48px;
+    border-radius: 17px;
+    line-height: 1;
+}
+
+/* Imagen de boton
+   =========== */
+.primary_button img {
+    width: var(--primary-image-size);
+    height: var(--primary-image-size);
+    margin-right: 15px;
+}
+
+/* Segundo botón
+   =========== */
+.secondary_button {
+    width: 140px;
+    height: 42px;
+    border-radius: 14px;
+    font-size: var(--quinary-font-size);
+}
+
+/* Tercer botón
+   =========== */
+.tertiary_button {
+    width: 250px;
+    height: 54px;
+}
+
+/* Cuarto botón
+   =========== */
+.quaternary_button {
+    width: 220px;
+    height: 50px;
+}
+
+/* Border y fuente para tercer y cuarto botón
+   =========== */
+.tertiary_button,
+.quaternary_button {
+    border-radius: 20px;
+    font-size: var(--quaternary-font-size);
+}
+
+.quinary_button {
+    width: 90px;
+    height: 40px;
+    gap: 10px;
+    border-radius: 9px;
+}

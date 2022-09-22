@@ -1,0 +1,146 @@
+/* =========== Estilos para plantilla del encabezado del contenido principal =========== */
+@import 'titulo_encabezado_contenido.css';
+@import '../search.css';
+@import '../buttons.css';
+@import '../form_elements/input_dropdown.css';
+
+/* Encabezado contenido principal
+   =========== */
+.header_main {
+    padding: 0 50px 0 21px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    user-select: none;
+}
+
+.group_header_main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.button_download {
+    padding: 0;
+    border: none;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    border-radius: 9px;
+}
+
+.button_download:focus{
+    outline: none;
+}
+
+#type_pdf {
+    background-color: var(--primary-color);
+}
+
+#type_excel {
+    background-color: #169154;
+}
+
+.download {
+    width: 78%;
+    height: 100%;
+    padding-top: 10px;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(0);
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    background-color: var(--tertiary-color);
+}
+
+.button_download:hover .download {
+    transform: translateY(78%);
+}
+
+.download svg polyline, .download svg line {
+    animation: docs 1s infinite;
+}
+
+@keyframes docs {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-15%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* Sección 'Nueva acción'
+   =========== */
+.new_action {
+    margin-left: 50px;
+}
+
+/* Botón 'Nuevo'
+   =========== */
+#new_button {
+    padding-right: 15px;
+    background-color: var(--primary-color);
+}
+
+#new_button:focus{
+    outline: 4px solid rgba(237, 28, 36, 0.5);
+}
+
+/* Contenedor fondo modal 'Nuevo'
+   =========== */
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #2323237F;
+    transition: opacity 300ms;
+}
+
+/* Contenedor fondo modal 'Nuevo' ->Activo
+   =========== */
+.backdrop_active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 100ms;
+}
+
+/* Opacidad modal 'Nuevo'
+   =========== */
+.container_form{
+    opacity: 0;
+    transition: all 400ms;
+}
+
+/* Modal 'Nuevo' -> Activo
+   =========== */
+.modal2_active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(65px);
+    transition: transform 640ms;
+}
+
+#close_modal {
+    border-radius: 50%;
+}
+
+#close_modal:hover {
+    background-color: var(--quaternary-color);
+}

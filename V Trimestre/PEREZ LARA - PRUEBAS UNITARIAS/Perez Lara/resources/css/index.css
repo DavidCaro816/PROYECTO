@@ -1,0 +1,298 @@
+@import "components/base/general.css";
+@import "components/form_elements/input_dropdown.css";
+@import "components/form_elements/checkbox.css";
+@import "components/buttons.css";
+@import "components/modal.css";
+@import "components/scrollbar.css";
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container::after, .container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 1080px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    transition: width 800ms;
+}
+
+/* Tamaño de main cuando el formulario de registro este activo
+   =========== */
+.main_register {
+    width: 1320px;
+}
+
+/* Sección de formularios
+   =========== */
+.forms {
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+/* Secciones de formularios
+   =========== */
+.register,
+.login {
+    padding: 60px;
+    transition: all 500ms;
+    background-color: var(--tertiary-color);
+}
+
+.register {
+    width: 660px;
+    border-radius: 40px 0 0 40px;
+    transform: scale(0.9);
+}
+
+/* Sección de formulario de registro -> activo
+   =========== */
+.register_active {
+    transform: scale(1);
+}
+
+.login {
+    width: 420px;
+    border-radius: 0 40px 40px 0;
+    transform: scale(1);
+}
+
+/* Sección de formulario de login -> inactivo
+   =========== */
+.login_inactive {
+    transform: scale(0.9);
+}
+
+/* Contenedor de botón
+   =========== */
+.button_container {
+    text-align: center;
+}
+
+/* Botones formularios-> 'registrarse' e 'iniciar sesión'
+   =========== */
+.button_container button {
+    background-color: var(--primary-color);
+}
+
+/* Formularios
+   =========== */
+.register_form,
+.login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+}
+
+/* Formulario de registro
+   =========== */
+.register_form {
+    width: 100%;
+    min-height: 449px;
+    padding: 40px;
+    transform: scale(0.9);
+    opacity: 0;
+    user-select: none;
+    transition: all 800ms;
+}
+
+/* Formulario de registro -> activo
+   =========== */
+.register_form_active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Distribución de inputs del formulario de registro
+   =========== */
+.inputs_register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Input contraseña
+   =========== */
+#group_contraseña {
+    grid-column: 1/3;
+}
+
+/* Contenedor del formulario de login
+   =========== */
+.container_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    user-select: none;
+    transform: scale(1);
+    transition: all 800ms;
+}
+
+/* Contenedor del formulario de login -> inactivo
+   =========== */
+.container_login_inactive {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Contenedor de la foto de perfil
+   =========== */
+.profile {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: var(--primary-box-shadow);
+    background-color: var(--secondary-color);
+}
+
+/* Foto de perfil
+   =========== */
+.profile img {
+    width: 110px;
+    height: 110px;
+}
+
+/* Formulario de login
+   =========== */
+.login_form {
+    min-height: 384px;
+    margin-top: 65px;
+    padding-top: 91px;
+}
+
+/* Distribución de inputs de formulario de login
+   =========== */
+.inputs_login {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Contenedor de opciones
+   =========== */
+.options {
+    width: 100%;
+    padding: 10px 15px 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Fuente para las opciones
+   =========== */
+.options,
+.options a {
+    font-size: var(--senary-font-size);
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.options a {
+    padding: 5px;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.label_checkbox {
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.options a:hover,
+.label_checkbox:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Contenedor boton login
+   =========== */
+.container_button_login {
+    padding: 0 40px 40px 40px;
+}
+
+/* Tapa
+   =========== */
+.cover {
+    width: 660px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    user-select: none;
+    box-shadow: 0 0 13px 5px rgb(0 0 0 / 25%);
+    border-radius: 47px;
+    background-color: var(--secondary-color);
+    background-image: url("../icons/login/background.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 800ms;
+}
+
+/* Tapa activa -> formulario de registro visible
+   =========== */
+.cover_register {
+    transform: translateX(100%);
+}
+
+#message,
+#button_open_forms {
+    background-color: var(--tertiary-color);
+}
+
+.shake {
+    animation: rebound 600ms;
+}
+
+@keyframes rebound {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(-3px);
+    }
+    30% {
+        transform: translateX(3px);
+    }
+    45% {
+        transform: translateX(-3px);
+    }
+    60% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    90% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

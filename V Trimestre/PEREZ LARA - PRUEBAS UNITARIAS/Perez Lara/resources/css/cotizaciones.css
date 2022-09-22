@@ -1,0 +1,122 @@
+/* Marcador de posición
+   =========== */
+#quotes {
+    background-color: var(--tertiary-color);
+}
+
+.container_form {
+    overflow: hidden;
+}
+
+.container_form .body_form {
+    margin: 0;
+    z-index: 3;
+    border: none;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+.container_form .header_form,
+.container_form .body_form,
+.container_form .footer_form {
+    position: sticky;
+    left: 0;
+}
+
+.form {
+    width: 1000px;
+    height: 510px;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.message_empty_table{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #231f2099;
+    font-size: var(--tertiary-font-size);
+}
+
+.message_empty_table_inactive{
+    display: none;
+}
+
+.table_form {
+    border-collapse: collapse;
+}
+
+.table_form thead {
+    text-align: center;
+    position: sticky;
+    top: -25px;
+    z-index: 2;
+    background: var(--secondary-color);
+}
+
+.table_form tr {
+    height: 50px;
+}
+
+.table_form tr {
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.table_form tr td:first-child {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.table_form thead tr th {
+    border-top: 1px solid var(--quaternary-color);
+}
+
+.table_form tr th:not(.table_form tr th:last-child),
+.table_form tr td:not(.table_form tr td:last-child) {
+    border-right: 1px solid var(--quaternary-color);
+}
+
+.table_form tr td ~ td {
+    text-align: center;
+}
+
+.table_form .body_form {
+
+}
+
+.container_title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.title {
+    flex: 1;
+}
+
+.input_title {
+    width: 120px;
+    height: 28px;
+    padding: 0 10px;
+    flex: 1;
+    font-size: var(--quinary-font-size);
+    margin: 0 20px 0 20px;
+    border-radius: 9px;
+    border: 1px solid #dcdcdc;
+}
+
+.input_title:focus {
+    outline: 1px solid var(--tertiary-color);
+}
+
+.separator {
+    height: 100%;
+    width: 1px;
+    background-color: var(--quaternary-color);
+}
+
+#añadir_cobertura {
+    background: var(--primary-color);
+}

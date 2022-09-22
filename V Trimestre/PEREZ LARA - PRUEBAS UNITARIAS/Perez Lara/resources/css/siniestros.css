@@ -1,0 +1,10 @@
+@import "new_modal.css";
+/* Marcador de posición
+   =========== */
+#sinisters {
+    background-color: var(--tertiary-color);
+}
+
+.large{
+    width: 700px;
+}

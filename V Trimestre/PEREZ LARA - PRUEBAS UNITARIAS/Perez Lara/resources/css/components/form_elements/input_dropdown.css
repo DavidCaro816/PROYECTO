@@ -1,0 +1,155 @@
+/* =========== Estilos para inputs y componentes desplegables =========== */
+
+/* Contenedor de input y su advertencia
+   =========== */
+   .group_input {
+    position: relative;
+    font-size: var(--quinary-font-size);
+}
+
+/* Tamaño de fuente para alertas
+   =========== */
+.alert {
+    font-size: var(--senary-font-size);
+    color: var(--primary-color);
+}
+
+/* Labels de inputs
+   =========== */
+.label {
+    left: 15px;
+    position: absolute;
+    transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    background-color: var(--secondary-color);
+}
+
+label[class="label"] {
+    cursor: text;
+}
+
+.label:not(.select .label ~ .label),
+.label_selected_active {
+    padding: 3px;
+}
+
+.label_selected_active{
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Label de input->Activo
+   =========== */
+.input:not(div):focus + .label,
+.label_active {
+    top: 0;
+    transform: translate(-8px, -50%) scale(0.9);
+}
+
+/* Input para llenar datos del formulario
+   =========== */
+.input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    outline: 1px solid var(--quaternary-color);
+    border-radius: 17px;
+}
+
+.input:-webkit-autofill {
+    box-shadow: 0 0 0 40px var(--secondary-color) inset;
+}
+
+.input:focus{
+    outline: 1px solid var(--tertiary-color);
+}
+
+.icon_alert {
+    background-image: url('../../../icons/buttons/warning.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+}
+
+/* Alineación texto inputs
+   =========== */
+.inputs,
+.select {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.select {
+    justify-content: flex-end;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
+/* Contenedor de opciones de inputs tipo select -> evita desborde de scrollbar
+   =========== */
+.data_option {
+    min-width: 100%;
+    width: max-content;
+    overflow: hidden;
+    top: 110%;
+    box-shadow: var(--primary-box-shadow);
+}
+
+/* Contenedor de opciones de inputs tipo select
+   =========== */
+.content {
+    margin: 0;
+    padding: 0;
+    max-height: 230px;
+    overflow-y: auto;
+}
+
+/* Opciones de tipo select
+   =========== */
+.option,
+.content li{
+    list-style: none;
+}
+
+.option,
+.content li .label_checkbox{
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.option:hover,
+.content li .label_checkbox:hover{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+/*input type File*/
+.container_file{
+    display: flex;
+}
+.file{
+    display: none;
+}
+
+#footer_modal{
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.buttons_footer{
+    display: flex;
+    gap: 15px;
+}
+
+.label_file{
+    height: max-content;
+    align-self: center;
+    width: max-content;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}

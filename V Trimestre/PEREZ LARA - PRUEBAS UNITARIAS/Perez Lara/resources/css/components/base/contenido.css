@@ -1,0 +1,34 @@
+/* =========== Estilos para plantilla del contenido principal =========== */
+@import "../form_elements/filter.css";
+@import "../form_elements/checkbox.css";
+@import "../table.css";
+@import "../context_menu.css";
+@import "../../new_modal.css";
+
+/* 1. Contenedor de datos
+   ====================================================== */
+.data_container {
+    max-height: 1820px;
+    height: 100%;
+    margin: 30px 40px 60px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+    box-shadow: var(--quaternary-box-shadow);
+}
+
+/* .1.1 Contenedor trasero
+   =========== */
+.back_container {
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: var(--quaternary-box-shadow);
+    background-color: var(--secondary-color);
+}
