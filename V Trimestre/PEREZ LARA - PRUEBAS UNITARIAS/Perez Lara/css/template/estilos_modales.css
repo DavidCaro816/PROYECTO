@@ -1,0 +1,38 @@
+/* =========== Estilos para modales =========== */
+
+/* Modales
+   ====================================================== */
+.modal {
+    z-index: 2;
+    position: absolute;
+    border-radius: 20px;
+    user-select: none;
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--secondary-color);
+    transition: opacity 180ms linear, visibility 180ms linear, transform 300ms;
+}
+
+/* Modal activo
+   =========== */
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Link de modales
+   =========== */
+.link_modal{
+    border-radius: 12px;
+    font-size: var(--quinary-font-size);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: background-color 300ms;
+}
+
+.link_modal:hover{
+    background-color: var(--quaternary-color);
+}

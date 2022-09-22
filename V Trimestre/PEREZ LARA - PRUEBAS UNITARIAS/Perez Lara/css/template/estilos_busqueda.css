@@ -1,0 +1,47 @@
+/* =========== Estilos para input de busqueda =========== */
+
+/* Contenedor input 'Buscar'
+   =========== */
+.search{
+    width: 196px;
+    border-radius: 17px;
+    transition: ease-in-out 300ms;
+    box-shadow: var(--primary-box-shadow);
+    position: relative;
+    background-color: var(--secondary-color);
+}
+
+/* Input 'Buscar'
+   =========== */
+.search input{
+    width: 160px;
+    height: 48px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 17px 0 0 17px;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Label input 'Buscar' -> Icono de input
+   =========== */
+#search + label{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    border-radius: 0 17px 17px 0;
+    position: absolute;
+    cursor: text;
+}
+
+#search + label img{
+    width: 24px;
+    height: 24px;
+}
+
+.search:hover{
+    box-shadow: var(--secondary-box-shadow);
+}

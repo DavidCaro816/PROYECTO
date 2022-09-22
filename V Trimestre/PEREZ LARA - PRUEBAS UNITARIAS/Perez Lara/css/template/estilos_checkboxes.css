@@ -1,0 +1,39 @@
+/* =========== Estilos para checkboxes =========== */
+
+/* Input de tipo checkbox
+   =========== */
+.checkbox{
+    display: none;
+}
+
+/* Label de checkbox
+   =========== */
+.label_checkbox{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+/* Antes del label de checkbox -> Representa el circulo a chequear
+   =========== */
+.label_checkbox:before {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    content: "";
+    border-radius: 50%;
+    border: 1px solid var(--tertiary-color);
+    background-color: var(--secondary-color);
+}
+
+/* Checkbox chequeado
+   =========== */
+.checkbox:checked + .label_checkbox:before{
+    background-image: url("../../icons/buttons/check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+    border: none;
+    background-color: var(--primary-color);
+}
